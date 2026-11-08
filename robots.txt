@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /quote
+
+Sitemap: https://couvertierpremier.com/sitemap.xml

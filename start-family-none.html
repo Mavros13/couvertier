@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Family coverage · Couvertier Premier Advisory</title>
+<link rel="icon" href="/media/logo-mark.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet"/>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: #475569; font-family: Lato, system-ui, "Segoe UI", Arial, sans-serif; font-size: 1.0625rem; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  header { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.95); border-bottom: 1px solid #e2e8f0; }
+  .bar { max-width: 1160px; margin: 0 auto; min-height: 88px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { height: 62px; width: auto; }
+  .word { font-family: Merriweather, Georgia, serif; font-size: 1.6rem; letter-spacing: .1em; text-transform: uppercase; color: #0e7490; line-height: 1; }
+  .sub { display: block; margin-top: 4px; font-size: .7rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #9a6b00; }
+  nav { display: none; align-items: center; gap: 20px; font-weight: 700; color: #0e7490; }
+  @media (min-width: 800px) { nav { display: flex; } }
+  .phone-pill { display: inline-flex; align-items: center; gap: .6rem; padding: .3rem 1.1rem .3rem .3rem; border-radius: 999px; background: #0e7490; color: #fff; font-weight: 700; }
+  .phone-pill span { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 999px; background: #f5b301; color: #083344; }
+  .start-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 100vh; background: #083344; }
+  .start-hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .45; }
+  .start-scrim { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(8,51,68,.9) 0%, rgba(8,51,68,.72) 42%, rgba(8,51,68,.45) 100%); }
+  .start-wrap { position: relative; z-index: 1; max-width: 1160px; margin: 0 auto; padding: 56px 16px; }
+  .start-grid { display: grid; gap: 28px; align-items: start; }
+  @media (min-width: 900px) { .start-grid { grid-template-columns: 1.05fr .95fr; } }
+  .eyebrow { margin: 0; font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #f5b301; }
+  .copy h1 { margin: 12px 0 0; max-width: 36rem; color: #fff; font-family: Merriweather, Georgia, serif; font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.12; }
+  .copy p { max-width: 38rem; color: rgba(255,255,255,.92); }
+  .copy a { color: #fff; text-decoration: underline; text-decoration-color: #f5b301; text-underline-offset: 4px; }
+  .consult-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 22px; padding: 22px 22px 18px; box-shadow: 0 24px 60px rgba(8,51,68,.18); }
+  .consult-card h2 { margin: 8px 0 4px; font-size: 1.7rem; color: #083344; font-family: Merriweather, Georgia, serif; line-height: 1.15; }
+  .field { display: grid; gap: 6px; margin-top: 12px; }
+  .field label { font-size: .84rem; font-weight: 700; color: #083344; }
+  .field input { min-height: 48px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 0 12px; font: 400 1rem Lato, sans-serif; color: #083344; background: #fff; }
+  .fine { margin: 0; font-size: .82rem; line-height: 1.45; color: #083344; }
+  .check { display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; font-size: .84rem; color: #083344; }
+  .check a { color: #0e7490; text-decoration: underline; text-underline-offset: 2px; }
+  .held { margin-top: 8px; padding: 14px; border-radius: 12px; background: #ecfbfe; color: #083344; }
+  .held p { margin: 0; }
+  .held .mt { margin-top: 6px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; margin-top: 16px; padding: .8rem 1.5rem; border: 0; border-radius: 12px; background: #f5b301; color: #083344; font: 700 1.05rem Lato, sans-serif; cursor: pointer; }
+  .btn:hover { background: #ffc933; }
+  .btn:disabled { opacity: .7; cursor: wait; }
+  .send-steps { display: flex; gap: 14px; list-style: none; margin: 0 0 8px; padding: 0; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .send-steps li { color: #94a3b8; }
+  .send-steps li.now { color: #0e7490; }
+  .send-bar { height: 4px; border-radius: 99px; background: #ecfbfe; margin: 0 0 14px; }
+  .send-bar span { display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #0e7490 0 68%, #f5b301 68% 100%); }
+  .advisor-line { margin: 0 0 10px; padding: 8px 12px; border-radius: 10px; background: #f8f6f1; border-left: 3px solid #f5b301; color: #083344; font-size: .86rem; font-weight: 700; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-err { margin-top: 10px; color: #9a3412; font-size: .84rem; font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="/">
+      <img src="/media/logo-mark.png" alt="" width="62" height="62"/>
+      <span><span class="word">Couvertier</span><span class="sub">Premier Advisory</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="/coverage">Coverage</a>
+      <a href="/learn">Guides</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="phone-pill" href="tel:+19548920550"><span aria-hidden="true">☎</span>(954) 892-0550</a>
+    </nav>
+  </div>
+</header>
+<main class="start-hero">
+  <video src="/media/family-park.mp4" autoplay muted loop playsinline preload="auto" poster="/media/scene-family-cover.jpg" aria-hidden="true"></video>
+  <div class="start-scrim"></div>
+  <div class="start-wrap">
+    <div class="start-grid">
+      <div class="copy">
+        <p class="eyebrow">Consultation request</p>
+        <h1>Family coverage</h1>
+        <p>There is no current health plan. This page asks for a conversation with the Sunrise office. It is not a bindable quote, and it does not calculate a subsidy or a premium.</p>
+        <p>Open daily, 7:45 AM to 10 PM ET. English and Spanish.</p>
+        <p><a href="tel:+19548920550">(954) 892-0550</a></p>
+      </div>
+      <div class="consult-card">
+        <ol class="send-steps" aria-label="Step 3 of 3">
+          <li>Who</li>
+          <li>Why</li>
+          <li class="now" aria-current="step">Send</li>
+        </ol>
+        <div class="send-bar" aria-hidden="true"><span></span></div>
+        <p class="advisor-line">A licensed agent will reach out.</p>
+        <h2>Where should we send your request?</h2>
+        <p class="fine">A consultation request for the Sunrise office. Not a bindable quote, and not a price.</p>
+        <form id="consult" novalidate>
+          <div class="hp"><label>Company<input type="text" name="company_site" tabindex="-1" autocomplete="off"></label></div>
+          <div class="field"><label for="full">Full name</label><input id="full" name="full" autocomplete="name"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <label class="check"><input id="consent" name="consent" type="checkbox"> <span>I agree that Couvertier Premier Advisory may call or text the number I entered about this request, including with automated technology. Consent is not required to buy a plan. Message and data rates may apply. Reply STOP to opt out of texts. The office is <a href="tel:+19548920550">(954) 892-0550</a> and <a href="mailto:couvertier@couvertierpremier.com">couvertier@couvertierpremier.com</a>.</span></label>
+          <p class="form-err" id="form-err" role="alert" hidden></p>
+          <button class="btn" type="submit">Send my request</button>
+        </form>
+        <div id="held" class="held" hidden>
+          <p><strong>Request received.</strong></p>
+          <p class="mt">A licensed agent will reach out. You can also call (954) 892-0550 or email couvertier@couvertierpremier.com.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="/start-send.js"></script>
+</body>
+</html>
